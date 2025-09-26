@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: Shadow
+    env: node
+    buildCommand: npm install
+    startCommand: node app.js
+    plan: starter
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: DATABASE_URL
+        sync: false # Value will be set in Render Dashboard for security
